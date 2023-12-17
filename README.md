@@ -1,3 +1,3 @@
-```shel
+```shell
 homebrew tap fadyat/apps
 ```
