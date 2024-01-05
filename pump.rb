@@ -5,20 +5,20 @@
 class Pump < Formula
   desc "A little randomness for choosing tasks in your world"
   homepage "https://github.com/fadyat/pump"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/fadyat/pump/releases/download/v0.0.1/pump_Darwin_x86_64.tar.gz"
-      sha256 "05384a0f71c5163465ee817e3ada8c333e14e1252f717df19963017829b314a9"
+    if Hardware::CPU.arm?
+      url "https://github.com/fadyat/pump/releases/download/v0.0.2/pump_Darwin_arm64.tar.gz"
+      sha256 "d90073faa71f469d955a7cd807909fd06991ccc8569db4e8643d447ead94562c"
 
       def install
         bin.install "pump"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/fadyat/pump/releases/download/v0.0.1/pump_Darwin_arm64.tar.gz"
-      sha256 "b1135248def1f22d0b5573096372f11502b8c1495ccaaff2379a4d3e23ee1871"
+    if Hardware::CPU.intel?
+      url "https://github.com/fadyat/pump/releases/download/v0.0.2/pump_Darwin_x86_64.tar.gz"
+      sha256 "37990fca98ac452b40617847daa917ebcceb03a69e98d697f14c1e9c8e6b3f4b"
 
       def install
         bin.install "pump"
@@ -27,17 +27,17 @@ class Pump < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fadyat/pump/releases/download/v0.0.1/pump_Linux_arm64.tar.gz"
-      sha256 "0a2d4f1c96c196fe21041f47aaeb5fe72fb2e85c2750994a165cad6de79ced8c"
+    if Hardware::CPU.intel?
+      url "https://github.com/fadyat/pump/releases/download/v0.0.2/pump_Linux_x86_64.tar.gz"
+      sha256 "5b386e65cbc40c164656407d0068b858ad72c5d4365a3653b44ebaabfa587d34"
 
       def install
         bin.install "pump"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fadyat/pump/releases/download/v0.0.1/pump_Linux_x86_64.tar.gz"
-      sha256 "cb44f92eb1dacbe2f2cf4c9230713ea2e4826f3451f386ef0af4ce8b00ddfaa9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fadyat/pump/releases/download/v0.0.2/pump_Linux_arm64.tar.gz"
+      sha256 "49c9e0b2b3b0dbb14117148bb49fcbec8894762dc5e419ce7bfbd2ffbb14ab95"
 
       def install
         bin.install "pump"
