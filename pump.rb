@@ -5,20 +5,20 @@
 class Pump < Formula
   desc "A little randomness for choosing tasks in your world"
   homepage "https://github.com/fadyat/pump"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/fadyat/pump/releases/download/v0.0.2/pump_Darwin_arm64.tar.gz"
-      sha256 "d90073faa71f469d955a7cd807909fd06991ccc8569db4e8643d447ead94562c"
+      url "https://github.com/fadyat/pump/releases/download/v0.0.3/pump_Darwin_arm64.tar.gz"
+      sha256 "6876efe4868bb46c05df301622efce79057a68241d69631c7cee6d6f0a1d0ffa"
 
       def install
         bin.install "pump"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fadyat/pump/releases/download/v0.0.2/pump_Darwin_x86_64.tar.gz"
-      sha256 "37990fca98ac452b40617847daa917ebcceb03a69e98d697f14c1e9c8e6b3f4b"
+      url "https://github.com/fadyat/pump/releases/download/v0.0.3/pump_Darwin_x86_64.tar.gz"
+      sha256 "cb27bf73b143e8ff02545f474e9f553970158eb9faf2879f735a17d1ae0fc18e"
 
       def install
         bin.install "pump"
@@ -28,16 +28,16 @@ class Pump < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/fadyat/pump/releases/download/v0.0.2/pump_Linux_x86_64.tar.gz"
-      sha256 "5b386e65cbc40c164656407d0068b858ad72c5d4365a3653b44ebaabfa587d34"
+      url "https://github.com/fadyat/pump/releases/download/v0.0.3/pump_Linux_x86_64.tar.gz"
+      sha256 "10e0c34561d158d01206aebaf908aa5bbf0167e4aaf1cabb42895b1c9bfc4725"
 
       def install
         bin.install "pump"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fadyat/pump/releases/download/v0.0.2/pump_Linux_arm64.tar.gz"
-      sha256 "49c9e0b2b3b0dbb14117148bb49fcbec8894762dc5e419ce7bfbd2ffbb14ab95"
+      url "https://github.com/fadyat/pump/releases/download/v0.0.3/pump_Linux_arm64.tar.gz"
+      sha256 "519b25bb53da461458f88fdb68e849139ba3ca6e105fbcc0d330c6809c07d73b"
 
       def install
         bin.install "pump"
