@@ -8,17 +8,17 @@ class Pump < Formula
   version "0.3.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/fadyat/pump/releases/download/v0.3.1/pump_Darwin_arm64.tar.gz"
-      sha256 "dece3ee9b4762ed593edddc54cebace804734f986195344645746ac4b734fa10"
+    if Hardware::CPU.intel?
+      url "https://github.com/fadyat/pump/releases/download/v0.3.1/pump_Darwin_x86_64.tar.gz"
+      sha256 "c7ad2a5369770360157bf06c548d36b9895b50cebf0bb226fdd671da42eb36f4"
 
       def install
         bin.install "pump"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fadyat/pump/releases/download/v0.3.1/pump_Darwin_x86_64.tar.gz"
-      sha256 "1c736ff839c774a2eb0fb896b0db398b739b34c256941fb6a2465379790507d1"
+    if Hardware::CPU.arm?
+      url "https://github.com/fadyat/pump/releases/download/v0.3.1/pump_Darwin_arm64.tar.gz"
+      sha256 "9dfd2525c961c984ffe812f590f5b159db7fd9af5aa9d50ffed6d36b1ce68473"
 
       def install
         bin.install "pump"
@@ -27,17 +27,17 @@ class Pump < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fadyat/pump/releases/download/v0.3.1/pump_Linux_arm64.tar.gz"
-      sha256 "6973bedc468ca562a9155316ef1ae79db7002026dc014ee66ca7220763fa6649"
+    if Hardware::CPU.intel?
+      url "https://github.com/fadyat/pump/releases/download/v0.3.1/pump_Linux_x86_64.tar.gz"
+      sha256 "e6315f623bd1e01b7ac67252906c634b756369d3da68b77fead57911f66b5bb6"
 
       def install
         bin.install "pump"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fadyat/pump/releases/download/v0.3.1/pump_Linux_x86_64.tar.gz"
-      sha256 "39ec64aa9f0bed592605bea9f37bec0d95ee658bb897ba1fdb6149092eb198b5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fadyat/pump/releases/download/v0.3.1/pump_Linux_arm64.tar.gz"
+      sha256 "f010ea10a87803c23f338c2eae755d9c0a99679105e58764e0d0daf13f191542"
 
       def install
         bin.install "pump"
