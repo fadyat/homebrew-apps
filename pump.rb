@@ -5,20 +5,20 @@
 class Pump < Formula
   desc "A little randomness for choosing tasks in your world"
   homepage "https://github.com/fadyat/pump"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/fadyat/pump/releases/download/v0.2.0/pump_Darwin_arm64.tar.gz"
-      sha256 "0c8cf942f0677f23b0618cf454d238eeceb1cf631c63e1b73be189f82d26aebb"
+      url "https://github.com/fadyat/pump/releases/download/v0.3.0/pump_Darwin_arm64.tar.gz"
+      sha256 "08bab38c859a19fc54a6c4a69021c3f07b689cf9062cd1b0808ffeb08999fa3d"
 
       def install
         bin.install "pump"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fadyat/pump/releases/download/v0.2.0/pump_Darwin_x86_64.tar.gz"
-      sha256 "a05b932b14744464e6ad89ea10856d78e130759923e815e68eda7357ec5f9607"
+      url "https://github.com/fadyat/pump/releases/download/v0.3.0/pump_Darwin_x86_64.tar.gz"
+      sha256 "95a3dc4899067d748e309a14c2bde6b97ef1abe9cdfc35ddcc1bb08d5ad8c22e"
 
       def install
         bin.install "pump"
@@ -27,17 +27,17 @@ class Pump < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fadyat/pump/releases/download/v0.2.0/pump_Linux_arm64.tar.gz"
-      sha256 "5757f574795dd0111ba7f0f65bcb8c5ca74204859090703d808781ec0141ce5e"
+    if Hardware::CPU.intel?
+      url "https://github.com/fadyat/pump/releases/download/v0.3.0/pump_Linux_x86_64.tar.gz"
+      sha256 "6511ad6ff88d659f2e24a60a4391796affd304b1d081480a1bfdbcc4518b0840"
 
       def install
         bin.install "pump"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fadyat/pump/releases/download/v0.2.0/pump_Linux_x86_64.tar.gz"
-      sha256 "86c9f36e0d39d271c1a79331c46f53f55a7c7cba019caac9fca0005d3648a48f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fadyat/pump/releases/download/v0.3.0/pump_Linux_arm64.tar.gz"
+      sha256 "8c129b7c150ab6e82c296f5c24e7b5a97493e4911cfb371806cb82c40f221adb"
 
       def install
         bin.install "pump"
