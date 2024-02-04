@@ -8,17 +8,17 @@ class Pump < Formula
   version "0.4.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/fadyat/pump/releases/download/v0.4.0/pump_Darwin_x86_64.tar.gz"
-      sha256 "b67d0d42f0042451c4c2275c39529de2f8eebe115c1bf65798386dac95af0083"
+    if Hardware::CPU.arm?
+      url "https://github.com/fadyat/pump/releases/download/v0.4.0/pump_Darwin_arm64.tar.gz"
+      sha256 "90c9bd4028e9887c3467d1c386d406ea2409aa712d708342f1c33200d30ef15f"
 
       def install
         bin.install "pump"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/fadyat/pump/releases/download/v0.4.0/pump_Darwin_arm64.tar.gz"
-      sha256 "df68c4da439548ed96ae2f623d37e74b5f2cf44923627a97129b7c8a9d9f2a90"
+    if Hardware::CPU.intel?
+      url "https://github.com/fadyat/pump/releases/download/v0.4.0/pump_Darwin_x86_64.tar.gz"
+      sha256 "03acd7fd2d8cde0e81e6b49651a7a2c32b53484226abfdb828651ef5081eb220"
 
       def install
         bin.install "pump"
@@ -29,7 +29,7 @@ class Pump < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/fadyat/pump/releases/download/v0.4.0/pump_Linux_arm64.tar.gz"
-      sha256 "ef67e5eebd08d4722d37c2ed9168447c62d8ab5dd58a6c53fc4290c429afccac"
+      sha256 "faa11fceb36d8b6dd2139b6e3701c7677288e42a255982ab51b310e9912bf994"
 
       def install
         bin.install "pump"
@@ -37,7 +37,7 @@ class Pump < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/fadyat/pump/releases/download/v0.4.0/pump_Linux_x86_64.tar.gz"
-      sha256 "42255481e8295bf085bfe5c5b4ca2752472284801983703250708240311dc566"
+      sha256 "af73d221a3c8c27374dec53cbba54bdb8602f57b00af519bfb9a21d82251e466"
 
       def install
         bin.install "pump"
