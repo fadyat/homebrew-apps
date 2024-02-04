@@ -5,20 +5,20 @@
 class Pump < Formula
   desc "A little randomness for choosing tasks in your world"
   homepage "https://github.com/fadyat/pump"
-  version "0.3.1"
+  version "0.4.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fadyat/pump/releases/download/v0.3.1/pump_Darwin_x86_64.tar.gz"
-      sha256 "c7ad2a5369770360157bf06c548d36b9895b50cebf0bb226fdd671da42eb36f4"
+      url "https://github.com/fadyat/pump/releases/download/v0.4.0/pump_Darwin_x86_64.tar.gz"
+      sha256 "b67d0d42f0042451c4c2275c39529de2f8eebe115c1bf65798386dac95af0083"
 
       def install
         bin.install "pump"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fadyat/pump/releases/download/v0.3.1/pump_Darwin_arm64.tar.gz"
-      sha256 "9dfd2525c961c984ffe812f590f5b159db7fd9af5aa9d50ffed6d36b1ce68473"
+      url "https://github.com/fadyat/pump/releases/download/v0.4.0/pump_Darwin_arm64.tar.gz"
+      sha256 "df68c4da439548ed96ae2f623d37e74b5f2cf44923627a97129b7c8a9d9f2a90"
 
       def install
         bin.install "pump"
@@ -27,17 +27,17 @@ class Pump < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/fadyat/pump/releases/download/v0.3.1/pump_Linux_x86_64.tar.gz"
-      sha256 "e6315f623bd1e01b7ac67252906c634b756369d3da68b77fead57911f66b5bb6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fadyat/pump/releases/download/v0.4.0/pump_Linux_arm64.tar.gz"
+      sha256 "ef67e5eebd08d4722d37c2ed9168447c62d8ab5dd58a6c53fc4290c429afccac"
 
       def install
         bin.install "pump"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fadyat/pump/releases/download/v0.3.1/pump_Linux_arm64.tar.gz"
-      sha256 "f010ea10a87803c23f338c2eae755d9c0a99679105e58764e0d0daf13f191542"
+    if Hardware::CPU.intel?
+      url "https://github.com/fadyat/pump/releases/download/v0.4.0/pump_Linux_x86_64.tar.gz"
+      sha256 "42255481e8295bf085bfe5c5b4ca2752472284801983703250708240311dc566"
 
       def install
         bin.install "pump"
