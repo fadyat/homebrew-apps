@@ -5,20 +5,20 @@
 class MongoCmp < Formula
   desc "Run some compare operations on MongoDB"
   homepage "https://github.com/fadyat/mongo-cmp"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fadyat/mongo-cmp/releases/download/v0.0.1/mongo-cmp_Darwin_x86_64.tar.gz"
-      sha256 "5501fc00a47dfd8650e4d3692b803585f6524507bdd9ff2a67b4a6874ebb9eda"
+      url "https://github.com/fadyat/mongo-cmp/releases/download/v0.0.2/mongo-cmp_Darwin_x86_64.tar.gz"
+      sha256 "69ca51a501f10a494fdfd8d4cccb1c8f74b9044b28939dd8e63627eaadb27fe1"
 
       def install
         bin.install "mongo-cmp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fadyat/mongo-cmp/releases/download/v0.0.1/mongo-cmp_Darwin_arm64.tar.gz"
-      sha256 "89886cea9e515ed9a387fb19d7ea956ccb5efb63f465ffc4be34b33abc705320"
+      url "https://github.com/fadyat/mongo-cmp/releases/download/v0.0.2/mongo-cmp_Darwin_arm64.tar.gz"
+      sha256 "9d549d40c322f644525d96e0cb8f60cc123c3d4d1bb33fde6c734334dd24d4af"
 
       def install
         bin.install "mongo-cmp"
@@ -28,16 +28,16 @@ class MongoCmp < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fadyat/mongo-cmp/releases/download/v0.0.1/mongo-cmp_Linux_arm64.tar.gz"
-      sha256 "9daabd52566b31811faad733216e24256d881722b74a2802f81d36eec37393d2"
+      url "https://github.com/fadyat/mongo-cmp/releases/download/v0.0.2/mongo-cmp_Linux_arm64.tar.gz"
+      sha256 "6be21c2d47b33b738b244c709f3e76cfaa9a7e4c8fb619713dd3fd7cb1aa47bf"
 
       def install
         bin.install "mongo-cmp"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fadyat/mongo-cmp/releases/download/v0.0.1/mongo-cmp_Linux_x86_64.tar.gz"
-      sha256 "1c8f7f2b12febec4078819a0e0041a11586d168d8def254ad3f928a3c913121a"
+      url "https://github.com/fadyat/mongo-cmp/releases/download/v0.0.2/mongo-cmp_Linux_x86_64.tar.gz"
+      sha256 "ec5630da9d5d554affdb2c45fbc04a1e0edbaa56ae0c5ad24d2c5e53c5cdd05b"
 
       def install
         bin.install "mongo-cmp"
